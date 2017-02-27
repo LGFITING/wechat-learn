@@ -17,7 +17,7 @@ $getQRCode = $weObj->getQRCode($scene_id,$type=0,$expire=604800);
 $type = $weObj->getRev()->getRevType();
 switch ($type) {
     case Wechat::MSGTYPE_TEXT:
-        $weObj->text($getQRCode)->reply();
+        $obj->image('d5Z_pBhHc88MfBhU8yHCPZOL5RTXHhLJix6i_mYXRskeyVxM7w8-5FsVWXi-aA_-')->reply();
         exit;
         break;
     case Wechat::MSGTYPE_EVENT:
