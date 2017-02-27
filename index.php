@@ -23,9 +23,9 @@ switch ($type) {
     default:
         $weObj->text("help info")->reply();
 }
-    //获取菜单操作:
+//获取菜单操作:
    $menu = $weObj->getMenu();
-   //设置菜单
+//设置菜单
    $newmenu =  array(
    		"button"=>
    			array(
