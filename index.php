@@ -15,7 +15,7 @@ $weObj->valid(); //明文或兼容模式可以在接口验证通过后注释此�
 $type = $weObj->getRev()->getRevType();
 switch ($type) {
     case Wechat::MSGTYPE_TEXT:
-        $obj->image('RdvnlzWOKaX72QWk-88TuFyUNBb8F0SkBHUwIb3miJL0SfCR6fLFVcHEN9Vt_P9s')->reply();
+        $weobj->image('RdvnlzWOKaX72QWk-88TuFyUNBb8F0SkBHUwIb3miJL0SfCR6fLFVcHEN9Vt_P9s')->reply();
         exit;
         break;
     case Wechat::MSGTYPE_EVENT:
