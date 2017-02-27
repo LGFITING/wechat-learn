@@ -12,12 +12,10 @@ $weObj = new Wechat($options);
 $weObj->valid(); //明文或兼容模式可以在接口验证通过后注释此句，但加密模式一定不能注释，否则会验证失败
 
 //二维码
-$scene_id = 1;
-$getQRCode = $weObj->getQRCode($scene_id,$type=0,$expire=604800);
 $type = $weObj->getRev()->getRevType();
 switch ($type) {
     case Wechat::MSGTYPE_TEXT:
-        $obj->image('d5Z_pBhHc88MfBhU8yHCPZOL5RTXHhLJix6i_mYXRskeyVxM7w8-5FsVWXi-aA_-')->reply();
+        $obj->image('RdvnlzWOKaX72QWk-88TuFyUNBb8F0SkBHUwIb3miJL0SfCR6fLFVcHEN9Vt_P9s')->reply();
         exit;
         break;
     case Wechat::MSGTYPE_EVENT:
