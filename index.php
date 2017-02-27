@@ -23,31 +23,14 @@ switch ($type) {
     default:
         $weObj->text("help info")->reply();
 }
-$data = ' {
-     "button":[
-     {	
-          "type":"click",
-          "name":"今日歌曲",
-          "key":"V1001_TODAY_MUSIC"
-      },
-      {
-           "name":"菜单",
-           "sub_button":[
-           {	
-               "type":"view",
-               "name":"搜索",
-               "url":"http://www.soso.com/"
-            },
-            {
-               "type":"view",
-               "name":"视频",
-               "url":"http://v.qq.com/"
-            },
-            {
-               "type":"click",
-               "name":"赞一下我们",
-               "key":"V1001_GOOD"
-            }]
-       }]
- }';
-$weObj->createMenu($data);
+    //获取菜单操作:
+   $menu = $weObj->getMenu();
+   //设置菜单
+   $newmenu =  array(
+   		"button"=>
+   			array(
+   				array('type'=>'click','name'=>'最新消息','key'=>'MENU_KEY_NEWS'),
+  				array('type'=>'view','name'=>'我要搜索','url'=>'http://www.baidu.com'),
+   				)
+ 		);
+   $result = $weObj->createMenu($newmenu);
