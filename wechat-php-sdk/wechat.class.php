@@ -897,7 +897,7 @@ class Wechat
 	 * Example: $obj->text('hello')->reply();
 	 * @param string $text
 	 */
-	public function text($text='1')
+	public function text($text='')
 	{
 		$FuncFlag = $this->_funcflag ? 1 : 0;
 		$msg = array(
