@@ -15,12 +15,10 @@ $weObj->valid(); //明文或兼容模式可以在接口验证通过后注释此�
 $scene_id = 1;
 $ticket = $weObj->getQRCode($scene_id,$type=0,$expire=604800);
 $imgUrl = $weObj->getQRUrl($ticket);
-//二维码
 $type = $weObj->getRev()->getRevType();
 switch ($type) {
     case Wechat::MSGTYPE_TEXT:
         $weObj->image('RdvnlzWOKaX72QWk-88TuFyUNBb8F0SkBHUwIb3miJL0SfCR6fLFVcHEN9Vt_P9s')->reply();
-        $weObj->text($imgUrl)->reply();
         exit;
         break;
     case Wechat::MSGTYPE_EVENT:
